@@ -1,0 +1,7 @@
+tk
+ccxt
+numpy
+pandas
+SQLAlchemy
+matplotlib
+customtkinter
