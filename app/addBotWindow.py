@@ -5,6 +5,7 @@ from DatabaseConnection.DatabaseConnection import DatabaseConnection
 exchanges = ["Binance"]
 market_types = ["Spot", "Futures"]
 symbols = ["BTC/USDT", "ETH/USDT", "LTC/USDT"]
+strategies = ["GridBot", "MeanReversion"]
 
 
 class AddBotWindow(ctk.CTkToplevel):
@@ -37,6 +38,16 @@ class AddBotWindow(ctk.CTkToplevel):
         self.symbolDropdown = ctk.CTkOptionMenu(self, values=symbols)
         self.symbolDropdown.pack(pady=10)
 
+        self.strategyLabel = ctk.CTkLabel(self, text="Strategy")
+        self.strategyLabel.pack(pady=10)
+        self.strategyDropdown = ctk.CTkOptionMenu(self, values=strategies)
+        self.strategyDropdown.pack(pady=10)
+
+        self.strategyParamsLabel = ctk.CTkLabel(self, text="Strategy Params")
+        self.strategyParamsLabel.pack(pady=10)
+        self.strategyParamsEntry = ctk.CTkEntry(self)
+        self.strategyParamsEntry.pack(pady=10)
+
         self.initialBalanceLabel = ctk.CTkLabel(self, text="Initial Balance")
         self.initialBalanceLabel.pack(pady=10)
         self.initialBalanceEntry = ctk.CTkEntry(self)
@@ -63,6 +74,8 @@ class AddBotWindow(ctk.CTkToplevel):
         newBot = createBot(
             name=self.nameEntry.get(),
             exchange=self.exchangeDropdown.get(),
+            strategy=self.strategyDropdown.get(),
+            strategy_params=self.strategyParamsEntry.get(),
             market_type=self.marketTypeDropdown.get(),
             symbol=self.symbolDropdown.get(),
             initial_balance=self.initialBalanceEntry.get(),

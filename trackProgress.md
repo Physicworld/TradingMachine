@@ -13,6 +13,7 @@
   - [ ] Crear vista de Estadisticas de cada bot
   - [ ] Mejorar la vista de tabla de bots
   - [ ] Cargar y mostrar bots de base de datos en tabla principal
+  - [ ] Menu dinamico al crear bot y seleccionar exchange
 
 ## Progress Report - 9/01/2024
-- [ ] Modificar Modelo de Bot para que guarde el tipo de estrategia
+- [x] Modificar Modelo de Bot para que guarde el tipo de estrategia y los parametros de la misma.
