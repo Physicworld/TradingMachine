@@ -11,9 +11,11 @@
  
 - [ ] App:
   - [ ] Crear vista de Estadisticas de cada bot
-  - [ ] Mejorar la vista de tabla de bots
-  - [ ] Cargar y mostrar bots de base de datos en tabla principal
   - [ ] Menu dinamico al crear bot y seleccionar exchange
+  - [ ] Programar utilidad de botones de acciones de bot
 
 ## Progress Report - 9/01/2024
 - [x] Modificar Modelo de Bot para que guarde el tipo de estrategia y los parametros de la misma.
+- [x] Refactorizamos todo a Tkinter, dejamos de usar customtkinter.
+- [x] Cargar y mostrar bots de base de datos en tabla principal
+- [ ] Mejorar la vista de tabla de bots (In Progress)
