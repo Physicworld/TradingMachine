@@ -14,6 +14,10 @@
   - [ ] Menu dinamico al crear bot y seleccionar exchange
   - [ ] Programar utilidad de botones de acciones de bot
 
+## Progress Report - 11/01/2024
+- [ ] Migrar lo que ya tenemos a flet
+
+
 ## Progress Report - 9/01/2024
 - [x] Modificar Modelo de Bot para que guarde el tipo de estrategia y los parametros de la misma.
 - [x] Refactorizamos todo a Tkinter, dejamos de usar customtkinter.

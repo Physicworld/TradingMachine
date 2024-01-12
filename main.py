@@ -1,9 +1,8 @@
-from app.App import App
+import flet as ft
+from appflet.app_view import AppView
 
-def main():
-    app = App()
-    app.mainloop()
+def main(page: ft.Page):
+    app_view = AppView(page)
+    app_view.render()
 
-
-if __name__ == "__main__":
-    main()
+ft.app(target=main)
