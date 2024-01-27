@@ -1,17 +1,14 @@
-import tkinter as tk
-from tkinter import ttk
-from app.BotTable import Tabla
+from PyQt5.QtWidgets import QApplication
+from app.app import MyApp  # Asegúrate de que esta ruta de importación sea correcta
 
-class AplicacionPrincipal(tk.Tk):
-    def __init__(self):
-        super().__init__()
-        self.title("Aplicación Principal")
+def main():
+    app = QApplication([])
 
-        # Crear la instancia de la clase Tabla y pasar la ventana principal como padre
-        self.tabla = Tabla(self)
-        self.tabla.pack(padx=10, pady=10)  # Llamar al método pack aquí
+    # Crear la aplicación
+    my_app = MyApp()
+    my_app.show()
 
+    app.exec_()
 
 if __name__ == "__main__":
-    app = AplicacionPrincipal()
-    app.mainloop()
+    main()
